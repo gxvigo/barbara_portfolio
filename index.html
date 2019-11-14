@@ -7,9 +7,15 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Barbara Barlocco digital portfolio</title>
 
-    <link href="./fontawesome/css/all.css" rel="stylesheet"> 
+    <!-- Next 3 line are necessary to handle video in modal -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+
+    <link href="./fontawesome/css/all.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Quicksand:300,500,600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="./css/style.css">
+    <script src="./js/script.js"></script>
 </Head>
 
 <body>
@@ -24,15 +30,79 @@
     <div id="menu">menu</div>
 
     <div class="portfolio center">
-        <div class="item"><div class="tile"><img src="./images/img1.jpeg"></div><span>Something new</span></div>
-        <div class="item"><img src="./images/img2.jpeg"><span>Something used</span></div>
-        <div class="item"><img src="./images/img3.jpeg"><span>Something blue</span></div>
-        <div class="item"><img src="./images/img4.jpeg"></div>
-        <div class="item"><img src="./images/img5.jpeg"></div>
-        <div class="item"><img src="./images/img6.jpeg"></div>
+
+        <div class="item">
+            <div class="tile"><img class="overlayed-image" src="./images/img1.jpeg"></div><span>Something new</span>
+            <div class="overlay-wrapper">
+                <div class="overlay-content">
+                    <h3>Matrix at the playground</h3>
+                    <p>Where superpowers and disrepect for the environment fight the definitive battle</p>
+                    <i class="far fa-play-circle fa-2x"></i>
+                </div>
+            </div>
+        </div>
+
+        <div class="item video" data-video="https://www.youtube.com/embed/HBdcL7YsdBY" data-toggle="modal"
+            data-target="#videoModal">
+            <div class="tile"><img class="overlayed-image" src="./images/superpower.jpg"></div><span>Something
+                new</span>
+            <div class="overlay-wrapper">
+                <a href="#">
+                    <div class="overlay-content">
+                        <h3>Matrix at the playground</h3>
+                        <p>Where superpowers and disrepect for the environment fight the definitive battle</p>
+                        <i class="far fa-play-circle fa-2x"></i>
+                    </div>
+                </a>
+            </div>
+        </div>
+
+
+        <div class="item video" data-video="https://www.youtube.com/embed/HBdcL7YsdBY" data-toggle="modal"
+            data-target="#videoModal"><a href="#">
+                <div class="tile"><img src="./images/img5.jpeg"></div>
+            </a><span>Something video</span>
+        </div>
+
+        <div class="item">
+            <div class="tile"><img src="./images/img2.jpeg"></div><span>Something blue</span>
+        </div>
+        <div class="item">
+            <div class="tile"><img src="./images/img3.jpeg"></div><span>Something used</span>
+        </div>
+        <div class="item">
+            <div class="tile"><img src="./images/img4.jpeg"></div><span>Something borrowed</span>
+        </div>
+
+        <div class="item video" data-video="https://www.youtube.com/embed/HBdcL7YsdBY" data-toggle="modal"
+            data-target="#videoModal"><a href="#">
+                <div class="tile"><img src="./images/img5.jpeg"></div>
+            </a><span>Something video</span>
+        </div>
+
+
+        <div class="item video" data-video="https://www.youtube.com/embed/HBdcL7YsdBY" data-toggle="modal"
+            data-target="#videoModal"><a href="#"><img src="./images/img5.jpeg"></a></div>
+
+        <div class="item"><iframe id="ytplayer" type="text/html" width="100%" height="360"
+                src="https://www.youtube.com/embed/M7lc1UVf-VE?autoplay=1&origin=http://example.com"
+                frameborder="0"></iframe></div>
     </div>
 
-    
+    <!-- Modal section for video plaer-->
+    <div class="modal fade" id="videoModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-body">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span
+                            aria-hidden="true">&times;</span></button>
+                    <iframe width="100%" height="350" src="" frameborder="0" allowfullscreen></iframe>
+                </div>
+            </div>
+        </div>
+    </div>
+
 
     <footer>
         <p>© 2019 by Barbara Barlocco</p>
